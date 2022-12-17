@@ -19,7 +19,7 @@ addToCart(product: Product) {
   clearCart() {
     this.items = [];
     return this.items;
-  }
+}
 
   constructor() { }
 }
