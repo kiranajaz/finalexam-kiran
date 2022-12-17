@@ -10,16 +10,23 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-cartService: any;
-
-  addToCart(product: Product) {
-    this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+product: { id: number; name: string; price: number; description: string; }|undefined;
 
   constructor(
     private route: ActivatedRoute,
     private CartService: CartService
   ) { }
+
+ngOnInit() {
+throw new Error('Method not implemented.');
+}
+cartService: any;
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
+    
+  { }
 }
 
 ngOninit() {
@@ -30,8 +37,4 @@ ngOninit() {
   // Find the product that correspond with the id provided in route.
   this.product = products.find(product => product.id === productIdFromRoute);
 
-}
-
-function private(private: any,route: any,ActivatedRoute: typeof ActivatedRoute,private: any,cartService: any,CartService: typeof CartService) {
-throw new Error('Function not implemented.');
 }
